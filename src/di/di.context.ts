@@ -1,10 +1,10 @@
 import {type Cradle, diContainer} from '@fastify/awilix';
 import {asClass, asValue} from 'awilix';
 import {type FastifyBaseLogger, type FastifyInstance} from 'fastify';
-import {type INotificationService} from '@/services/notifications.port.js';
-import {NotificationService} from '@/services/impl/notification.service.js';
+import {type INotificationService} from '@/services/notifications.port.ts';
+import {NotificationService} from '@/services/product/notification.service.ts';
 import {type Database} from '@/db/type.js';
-import {ProductService} from '@/services/impl/product.service.js';
+import {ProductService} from '@/services/product/product.service.ts';
 
 declare module '@fastify/awilix' {
 
