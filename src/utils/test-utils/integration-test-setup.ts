@@ -2,7 +2,7 @@ import {exec as execCallback} from 'node:child_process';
 import {promisify} from 'node:util';
 import {rm} from 'node:fs/promises';
 import {beforeEach, afterEach} from 'vitest';
-import {CONFIG} from '../../configuration/index.js';
+import {CONFIG} from '@/configuration/index.ts';
 
 const exec = promisify(execCallback);
 const databaseConfig = CONFIG.get('db');

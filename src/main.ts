@@ -12,7 +12,7 @@ const main = async () => {
 
 	const server = await buildFastify();
 
-	server.listen({host: '0.0.0.0', port: serverConfig.port}, error => {
+	server.listen({host: '0.0.0.0', port: serverConfig.port}, (error: Error | null) => {
 		if (error) {
 			throw error;
 		}
