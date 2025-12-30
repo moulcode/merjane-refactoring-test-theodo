@@ -47,9 +47,6 @@ importers:
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
-      drizzle-orm:
-        specifier: ^0.31.1
-        version: 0.31.1(@electric-sql/pglite@0.1.5)(@types/better-sqlite3@7.6.10)(@types/pg@8.11.6)(better-sqlite3@11.0.0)(pg@8.12.0)
       fast-glob:
         specifier: ^3.3.2
         version: 3.3.2
@@ -93,6 +90,9 @@ importers:
       '@types/convict-format-with-validator':
         specifier: ^6.0.5
         version: 6.0.5
+      '@types/node':
+        specifier: ^25.0.3
+        version: 25.0.3
       '@types/source-map-support':
         specifier: ^0.5.10
         version: 0.5.10
@@ -101,7 +101,7 @@ importers:
         version: 6.0.2
       '@vitest/coverage-v8':
         specifier: 1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.14.1)(@vitest/ui@1.6.0)(terser@5.31.0))
+        version: 1.6.0(vitest@1.6.0(@types/node@25.0.3)(@vitest/ui@1.6.0)(terser@5.31.0))
       '@vitest/ui':
         specifier: 1.6.0
         version: 1.6.0(vitest@1.6.0)
@@ -111,6 +111,9 @@ importers:
       drizzle-kit:
         specifier: ^0.22.2
         version: 0.22.2
+      drizzle-orm:
+        specifier: ^0.31.1
+        version: 0.31.1(@electric-sql/pglite@0.1.5)(@types/better-sqlite3@7.6.10)(@types/pg@8.11.6)(better-sqlite3@11.0.0)(pg@8.12.0)
       esbuild:
         specifier: ^0.17.19
         version: 0.17.19
@@ -128,7 +131,7 @@ importers:
         version: 7.0.0
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.14.1)(typescript@5.4.5)
+        version: 10.9.2(@types/node@25.0.3)(typescript@5.4.5)
       tsc-alias:
         specifier: ^1.8.10
         version: 1.8.10
@@ -138,12 +141,15 @@ importers:
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
+      vite-tsconfig-paths:
+        specifier: ^6.0.3
+        version: 6.0.3(typescript@5.4.5)(vite@5.2.12(@types/node@25.0.3)(terser@5.31.0))
       vitest:
         specifier: 1.6.0
-        version: 1.6.0(@types/node@20.14.1)(@vitest/ui@1.6.0)(terser@5.31.0)
+        version: 1.6.0(@types/node@25.0.3)(@vitest/ui@1.6.0)(terser@5.31.0)
       vitest-mock-extended:
         specifier: ^1.3.1
-        version: 1.3.1(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.1)(@vitest/ui@1.6.0)(terser@5.31.0))
+        version: 1.3.1(typescript@5.4.5)(vitest@1.6.0(@types/node@25.0.3)(@vitest/ui@1.6.0)(terser@5.31.0))
       xo:
         specifier: ^0.58.0
         version: 0.58.0(@types/eslint@8.56.10)(webpack@5.91.0(esbuild@0.17.19))
@@ -978,8 +984,8 @@ packages:
   '@types/methods@1.1.4':
     resolution: {integrity: sha512-ymXWVrDiCxTBE3+RIrrP533E70eA+9qu7zdWoHuOmGujkYtzf4HQF96b8nwHLqhuf4ykX61IGRIB38CC6/sImQ==}
 
-  '@types/node@20.14.1':
-    resolution: {integrity: sha512-T2MzSGEu+ysB/FkWfqmhV3PLyQlowdptmmgD20C6QxsS8Fmv5SjpZ1ayXaEC0S21/h5UJ9iA6W/5vSNU5l00OA==}
+  '@types/node@25.0.3':
+    resolution: {integrity: sha512-W609buLVRVmeW693xKfzHeIV6nJGGz98uCPfeXI1ELMLXVeKYZ9m15fAMSaUPBHYLGFsVRcMmSCksQOrZV9BYA==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1145,6 +1151,7 @@ packages:
 
   acorn-import-assertions@1.9.0:
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
+    deprecated: package has been renamed to acorn-import-attributes
     peerDependencies:
       acorn: ^8
 
@@ -2197,6 +2204,9 @@ packages:
   globby@14.0.1:
     resolution: {integrity: sha512-jOMLD2Z7MAhyG8aJpNOpmziMOP4rPLcc95oQPKXBazW82z+CEgPFBQvEpRUa1KeIMUJo4Wsm+q6uzO/Q/4BksQ==}
     engines: {node: '>=18'}
+
+  globrex@0.1.2:
+    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
 
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
@@ -3476,6 +3486,16 @@ packages:
     resolution: {integrity: sha512-Ibv4KAWfFkFdKJxnWfVtdOmB0Zi1RJVxcbPGiCDsFpCQSsmpWyuzHG3rQyI5YkobWwxFPEyQfu1hdo4qLG2zPw==}
     hasBin: true
 
+  tsconfck@3.1.6:
+    resolution: {integrity: sha512-ks6Vjr/jEw0P1gmOVwutM3B7fWxoWBL2KRDb1JfqGVawBmO5UsvmWOQFGHBPl5yxYz4eERr19E6L7NMv+Fej4w==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
 
@@ -3545,8 +3565,8 @@ packages:
     resolution: {integrity: sha512-eXL4nmJT7oCpkZsHZUOJo8hcX3GbsiDOa0Qu9F646fi8dT3XuSVopVqAcEiVzSKKH7UoDti23wNX3qGFxcW5Qg==}
     engines: {node: '>=0.10.0'}
 
-  undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+  undici-types@7.16.0:
+    resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
   unicorn-magic@0.1.0:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
@@ -3585,6 +3605,14 @@ packages:
     resolution: {integrity: sha512-de6HJgzC+TFzOu0NTC4RAIsyf/DY/ibWDYQUcuEA84EMHhcefTUGkjFHKKEJhQN4A+6I0u++kr3l36ZF2d7XRw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
+
+  vite-tsconfig-paths@6.0.3:
+    resolution: {integrity: sha512-7bL7FPX/DSviaZGYUKowWF1AiDVWjMjxNbE8lyaVGDezkedWqfGhlnQ4BZXre0ZN5P4kAgIJfAlgFDVyjrCIyg==}
+    peerDependencies:
+      vite: '*'
+    peerDependenciesMeta:
+      vite:
+        optional: true
 
   vite@5.2.12:
     resolution: {integrity: sha512-/gC8GxzxMK5ntBwb48pR32GGhENnjtY30G4A0jemunsBkiEZFw60s8InGpN8gkhHEkjnRK1aSAxeQgwvFhUHAA==}
@@ -4255,7 +4283,7 @@ snapshots:
 
   '@types/better-sqlite3@7.6.10':
     dependencies:
-      '@types/node': 20.14.1
+      '@types/node': 25.0.3
 
   '@types/convict-format-with-validator@6.0.5':
     dependencies:
@@ -4263,7 +4291,7 @@ snapshots:
 
   '@types/convict@6.1.6':
     dependencies:
-      '@types/node': 20.14.1
+      '@types/node': 25.0.3
 
   '@types/cookiejar@2.1.5': {}
 
@@ -4287,9 +4315,9 @@ snapshots:
 
   '@types/methods@1.1.4': {}
 
-  '@types/node@20.14.1':
+  '@types/node@25.0.3':
     dependencies:
-      undici-types: 5.26.5
+      undici-types: 7.16.0
 
   '@types/normalize-package-data@2.4.4': {}
 
@@ -4297,7 +4325,7 @@ snapshots:
 
   '@types/pg@8.11.6':
     dependencies:
-      '@types/node': 20.14.1
+      '@types/node': 25.0.3
       pg-protocol: 1.6.1
       pg-types: 4.0.2
     optional: true
@@ -4310,7 +4338,7 @@ snapshots:
     dependencies:
       '@types/cookiejar': 2.1.5
       '@types/methods': 1.1.4
-      '@types/node': 20.14.1
+      '@types/node': 25.0.3
 
   '@types/supertest@6.0.2':
     dependencies:
@@ -4400,7 +4428,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitest/coverage-v8@1.6.0(vitest@1.6.0(@types/node@20.14.1)(@vitest/ui@1.6.0)(terser@5.31.0))':
+  '@vitest/coverage-v8@1.6.0(vitest@1.6.0(@types/node@25.0.3)(@vitest/ui@1.6.0)(terser@5.31.0))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -4415,7 +4443,7 @@ snapshots:
       std-env: 3.7.0
       strip-literal: 2.1.0
       test-exclude: 6.0.0
-      vitest: 1.6.0(@types/node@20.14.1)(@vitest/ui@1.6.0)(terser@5.31.0)
+      vitest: 1.6.0(@types/node@25.0.3)(@vitest/ui@1.6.0)(terser@5.31.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -4450,7 +4478,7 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.0.1
       sirv: 2.0.4
-      vitest: 1.6.0(@types/node@20.14.1)(@vitest/ui@1.6.0)(terser@5.31.0)
+      vitest: 1.6.0(@types/node@25.0.3)(@vitest/ui@1.6.0)(terser@5.31.0)
 
   '@vitest/utils@1.6.0':
     dependencies:
@@ -5785,6 +5813,8 @@ snapshots:
       slash: 5.1.0
       unicorn-magic: 0.1.0
 
+  globrex@0.1.2: {}
+
   gopd@1.0.1:
     dependencies:
       get-intrinsic: 1.2.4
@@ -6021,7 +6051,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 20.14.1
+      '@types/node': 25.0.3
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -7019,14 +7049,14 @@ snapshots:
     optionalDependencies:
       typescript: 5.4.5
 
-  ts-node@10.9.2(@types/node@20.14.1)(typescript@5.4.5):
+  ts-node@10.9.2(@types/node@25.0.3)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.14.1
+      '@types/node': 25.0.3
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
@@ -7045,6 +7075,10 @@ snapshots:
       mylas: 2.1.13
       normalize-path: 3.0.0
       plimit-lit: 1.6.1
+
+  tsconfck@3.1.6(typescript@5.4.5):
+    optionalDependencies:
+      typescript: 5.4.5
 
   tsconfig-paths@3.15.0:
     dependencies:
@@ -7125,7 +7159,7 @@ snapshots:
 
   unc-path-regex@0.1.2: {}
 
-  undici-types@5.26.5: {}
+  undici-types@7.16.0: {}
 
   unicorn-magic@0.1.0: {}
 
@@ -7154,13 +7188,13 @@ snapshots:
 
   validator@13.12.0: {}
 
-  vite-node@1.6.0(@types/node@20.14.1)(terser@5.31.0):
+  vite-node@1.6.0(@types/node@25.0.3)(terser@5.31.0):
     dependencies:
       cac: 6.7.14
       debug: 4.3.5
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.2.12(@types/node@20.14.1)(terser@5.31.0)
+      vite: 5.2.12(@types/node@25.0.3)(terser@5.31.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -7171,23 +7205,34 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.2.12(@types/node@20.14.1)(terser@5.31.0):
+  vite-tsconfig-paths@6.0.3(typescript@5.4.5)(vite@5.2.12(@types/node@25.0.3)(terser@5.31.0)):
+    dependencies:
+      debug: 4.3.5
+      globrex: 0.1.2
+      tsconfck: 3.1.6(typescript@5.4.5)
+    optionalDependencies:
+      vite: 5.2.12(@types/node@25.0.3)(terser@5.31.0)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
+  vite@5.2.12(@types/node@25.0.3)(terser@5.31.0):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.18.0
     optionalDependencies:
-      '@types/node': 20.14.1
+      '@types/node': 25.0.3
       fsevents: 2.3.3
       terser: 5.31.0
 
-  vitest-mock-extended@1.3.1(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.1)(@vitest/ui@1.6.0)(terser@5.31.0)):
+  vitest-mock-extended@1.3.1(typescript@5.4.5)(vitest@1.6.0(@types/node@25.0.3)(@vitest/ui@1.6.0)(terser@5.31.0)):
     dependencies:
       ts-essentials: 9.4.2(typescript@5.4.5)
       typescript: 5.4.5
-      vitest: 1.6.0(@types/node@20.14.1)(@vitest/ui@1.6.0)(terser@5.31.0)
+      vitest: 1.6.0(@types/node@25.0.3)(@vitest/ui@1.6.0)(terser@5.31.0)
 
-  vitest@1.6.0(@types/node@20.14.1)(@vitest/ui@1.6.0)(terser@5.31.0):
+  vitest@1.6.0(@types/node@25.0.3)(@vitest/ui@1.6.0)(terser@5.31.0):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -7206,11 +7251,11 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.2.12(@types/node@20.14.1)(terser@5.31.0)
-      vite-node: 1.6.0(@types/node@20.14.1)(terser@5.31.0)
+      vite: 5.2.12(@types/node@25.0.3)(terser@5.31.0)
+      vite-node: 1.6.0(@types/node@25.0.3)(terser@5.31.0)
       why-is-node-running: 2.2.2
     optionalDependencies:
-      '@types/node': 20.14.1
+      '@types/node': 25.0.3
       '@vitest/ui': 1.6.0(vitest@1.6.0)
     transitivePeerDependencies:
       - less
